@@ -1,0 +1,22 @@
+.container-Custom{
+  margin-left: 10%; 
+  margin-right: 10%;
+  margin-top: 2%;
+}
+
+.btn-xs{
+  margin-right: 3%;
+}
+
+.col-md-8{ 
+  padding: 5%;
+  margin-top: -5%;
+}
+
+.table{
+  width: 100%;
+}
+
+.AceEditor{
+	height: 180px;
+}

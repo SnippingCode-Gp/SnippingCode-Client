@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="/Code/CodeTree/CodeTree.css">
+<br/><br/>
+<div ng-controller="viewCodeController">
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="row">
+            <!-- Blog Post Content Column -->
+            <div class="col-lg-8">
+                <!-- File Name-->
+                <h1>{{file.name}}</h1>
+                <!-- Author -->
+                <p class="lead"> by <a>{{file.username}}</a></p>
+
+                <!-- Post Content -->
+                <p> <pre class="prettyprint">{{file.code}}</pre>
+
+                </p><p class="lead">{{file.description}}</p><hr>
+
+                <!-- Comments Form -->
+                <div class="well">
+                    <h4>Leave a Comment:</h4>
+                    <div class="form-group">
+                        <textarea class="form-control" rows="3" ng-model="comment"></textarea>
+                    </div>
+                    <button type="submit" ng-click="addComment()" class="btn btn-primary">Submit</button>
+                </div>
+
+                <hr>
+
+                <!-- Comment -->
+                <div ng-repeat="comment in comments">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img class="media-object" src="http://placehold.it/64x64" alt="">
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{comment.username}}</h4>
+                            {{comment.description}}
+                        </div>
+                    </div>
+                    <br>
+                </div>
+    </div>
+
+  <!-- Blog Sidebar Widgets Column -->
+            <div class="col-md-4">
+
+                <!-- Blog Categories Well -->
+                <div class="well">
+                    <h4>Code Tags</h4>
+                    <div class="row">
+			  			<div ng-repeat="itemTag in file.tags">
+	                        <div class="col-lg-4">
+                                <li><a>{{itemTag}}</a></li>
+	                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

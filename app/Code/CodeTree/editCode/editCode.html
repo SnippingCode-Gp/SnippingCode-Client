@@ -1,0 +1,36 @@
+<link rel="stylesheet" href="/Code/CodeTree/CodeTree.css">
+<div class="container-Custom" ng-controller="editCodeController">
+<div class="modal-body">
+	<h4 class="modal-title" id="myModalLabel">Edit Code</h4>
+	<form novalidate name="createOrgForm" class= "myForm" ng-submit="onSubmitNewCode()">
+			<p>file name :</p>
+			<input ng-model="file.name" class="form-control" placeholder="file name">
+			<p ng-show="fileAuth.userNameExist" class="help-block">file name exist</p>
+			
+			<p>file type :</p>
+			<input ng-model="file.type" class="form-control" placeholder="file type">
+			<p ng-show="fileAuth.typeWrong" class="help-block">file type wrong</p>
+
+			<p>Code Tags
+			<tags-input class="bootstrap" ng-model="file.tags" placeholder="Add Tag">
+					<auto-complete source="loadTags($query)" min-length="3" debounce-delay="0"></auto-complete>
+			</tags-input>
+			</p>
+			
+			<p>Descrition :
+				<textarea class="form-control" ng-model="file.description" rows="3"></textarea>
+			</p>
+
+			<p>code :
+			<div ui-ace ng-model="file.code" class="AceEditor" >Ace here</div>
+			</p>
+			<p ng-show="fileAuth.code" class="help-block">add code</p>
+
+			<p ng-show="fileAuth.server" class="help-block">server unavailable</p>
+			<div class="modal-footer">
+				<button type="submit" class="btn btn-primary">Save changes</button>
+				<button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+			</div>
+	</form>
+</div>
+</div>

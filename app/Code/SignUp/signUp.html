@@ -1,0 +1,54 @@
+<div class="modal-dialog">
+	<div class="modal-content">
+	
+	<div class="modal-header">
+		<h4 class="modal-title" id="myModalLabel">sign up</h4>
+	</div>
+
+	<div class="panel-heading">
+	<div class="panel-title"></div>
+
+	<div class="modal-body">
+	<form id="signupform" class="form-horizontal" role="form" ng-submit="formsignup()">
+
+		<div class="form-group">
+		<input type="text" ng-model="user.name" class="form-control" placeholder="name"></div>
+		<span class="help-block" ng-show="signUpname.notFound">enter your name</span>
+
+		<div class="form-group">
+		<input type="text" ng-blur="validateusername()" ng-model="user.username" class="form-control" 	placeholder="user name"></div>
+		<span class="help-block" ng-show="signUpUsername.shortWord">very short</span>
+		<span class="help-block"ng-show="signUpUsername.alreadyExist">already exist</span>
+			
+
+		<div class="form-group">
+		<input type="text" ng-blur="validateemail()" ng-model="user.email" class="form-control" placeholder="email">
+		</div>
+		<span class="help-block" ng-show="signUpEmail.errorFormat">check your email</span>
+		<span class="help-block" ng-show="signUpEmail.alreadyExist">already exist</span>
+
+
+		<div class="form-group">
+		<input type="password" ng-blur="validatepass()" ng-model="user.password" class="form-control" placeholder="Password">
+		</div>
+		<span class="help-block" ng-show="signUpPassword.veryShort">very short</span>
+		
+		<div class="form-group">
+		<input type="password" ng-blur="validaterepass()" ng-model="user.repassword" class="form-control" placeholder="Re Password">
+		</div>
+		<span class="help-block" ng-show="signUpRePassword.notmatch">not match</span>
+		<span class="help-block" ng-show="signUpService.server">server unavailable</span>
+
+		<div class="modal-footer">
+			<div style="margin-top: 10px" class="form-group">
+				<!-- Button -->
+				<div class="col-sm-12 controls">
+					<button name="loginBtn" class="btn btn-success" type="submit">sign up</button>
+				</div>
+			</div>
+		</div>
+
+	</form>
+</div>
+</div>
+</div>

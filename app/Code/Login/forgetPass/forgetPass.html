@@ -1,0 +1,29 @@
+<div class="modal fade" id="ForgetPassword" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" ng-controller="forgetPassCtrl">
+
+<div class="modal-dialog">
+	<div class="modal-content">
+		<div class="modal-header">
+			<h4 class="modal-title" id="myModalLabel">Code</h4>
+		</div>
+		<div class="modal-body">
+			
+			<form novalidate name="createOrgForm" class= "myForm" ng-submit="onSubmitForget()">
+				<p>your email :</p>
+				<input ng-model="email" class="form-control" placeholder="email" ng-blur="validateemail()">
+				<p ng-show="forgetEmail.emailIncorrect" class="help-block">email is incorrect</p>
+				<p ng-show="forgetEmail.invalid" class="help-block">enter email</p>
+				<p ng-show="forgetEmail.emailUnExist" class="help-block">email not found</p>
+				<div class="modal-footer">
+				<p>
+					<button type="submit" class="btn btn-primary">
+					<span ng-show="forgetEmail.loading"><img src="/Code/Common/img/loader.gif">&nbsp;&nbsp;</span>
+					Save changes</button>
+					<button type="reset" class="btn btn-default" data-dismiss="modal">Close</button>
+				</div>
+				</div>
+			</form>
+			
+		</div>
+	</div>
+</div>	
+
