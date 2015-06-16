@@ -14,7 +14,7 @@ sudo chown -R $USER /usr/lib/node_modules/ (for user permission)
 * command :: bower install (note for windows : from git bash )
 
 
-bower install angular-ui-ace\#bower
-bower install angular-utf8-base64
-bower install angular-base64
-bower install angular-ui-tree
+* bower install angular-ui-ace\#bower
+* bower install angular-utf8-base64
+* bower install angular-base64
+* bower install angular-ui-tree
