@@ -3,10 +3,10 @@ Snipping Code is open project which you can to pull your Code on your File direc
 
 # Code snippest #
 ## we use youmen generator ##
-### resources :: http://yeoman.io/learning/index.html ###
+### resources :: [Youmen](http://yeoman.io/learning/index.html) ###
 
 #### install process ####
-* install node js (http://nodejs.org/)
+* install [node js] (http://nodejs.org/)
 sudo chown -R $USER /usr/lib/node_modules/ (for user permission)
 * for linux (npm install -g bower)
 * install bower (npm install -g yo bower grunt-cli gulp) in project path
